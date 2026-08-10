@@ -37,6 +37,38 @@ TWDB. 2026c. Historical Water Use Estimates by County, 2000 and Later
 (Includes Reuse).
 <https://www3.twdb.texas.gov/apps/reports/WU_REP/SumFinal_CountyReportWithReuse>
 
+U.S. Department of Commerce. 1990. 1988 Farm and Ranch Irrigation
+Survey.
+<https://www.nass.usda.gov/AgCensus/archive/census_parts/1987-farm-and-ranch-irrigation-survey-1988/index.html>
+
+USDA National Agriculture Statistics Service. 1996. 1994 Farm and Ranch
+Irrigation Survey.
+<https://www.nass.usda.gov/AgCensus/archive/census_parts/1992-1994-farm-and-ranch-irrigation-survey/index.html>
+
+USDA National Agriculture Statistics Service. 1999. 1998 Farm and Ranch
+Irrigation Survey.
+<https://www.nass.usda.gov/AgCensus/archive/census_parts/1997-farm-and-ranch-irrigation-survey/index.html>
+
+USDA National Agriculture Statistics Service. 2004. 2003 Farm and Ranch
+Irrigation Survey.
+<https://www.nass.usda.gov/AgCensus/archive/census_parts/2002-farm-and-ranch-irrigation-survey/index.html>
+
+USDA National Agriculture Statistics Service. 2010. 2008 Farm and Ranch
+Irrigation Survey.
+<https://www.nass.usda.gov/AgCensus/archive/census_parts/2007-farm-and-ranch-irrigation-survey/index.html>
+
+USDA National Agriculture Statistics Service. 2014. 2013 Farm and Ranch
+Irrigation Survey.
+<https://www.nass.usda.gov/AgCensus/archive/census_parts/2012-2013-farm-and-ranch-irrigation-survey/index.html>
+
+USDA National Agriculture Statistics Service. 2019. 2018 Irrigation and
+Water Management Survey.
+<https://www.nass.usda.gov/Publications/AgCensus/2017/Online_Resources/Farm_and_Ranch_Irrigation_Survey/index.php>
+
+USDA National Agriculture Statistics Service. 2024. 2023 Irrigation and
+Water Management Survey.
+<https://www.nass.usda.gov/Publications/AgCensus/2022/Online_Resources/Farm_and_Ranch_Irrigation_Survey/index.php>
+
 USGS. 2026. National Water Availability Assessment Data Companion: Crop
 Irrigation Withdrawals Water-Use Model.
 <https://water.usgs.gov/nwaa-data/>
