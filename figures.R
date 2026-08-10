@@ -672,6 +672,11 @@ ggplot(crop_use_df_top_three) +
 ggsave(fs::path("Figures", "Figure_7", ext = "png"), dpi = 300, width = 6.5, height = 4, units = "in")
 
 
+##*****************##
+##### Figure 8 ######
+##*****************##
+
+
 library(waffle)
 
 major_crop <- crop_use_df |> 
@@ -717,3 +722,59 @@ ggplot(major_crop) +
 
 
 ggsave(fs::path("Figures", "waffle_crop", ext = "png"), dpi = 300, width = 6.25, height = 3.25, units = "in")
+
+
+
+
+##*****************##
+##### Figure 9 ######
+##*****************##
+
+systems_df <- read_csv("Data/systems.csv")
+systems_df <- systems_df |> 
+  janitor::clean_names() |> 
+  select(year, sprinkler_acres, gravity_acres, drip_acres) |> 
+  pivot_longer(-c(year)) |> 
+  mutate(name = stringr::str_remove(name, "_acres")) |> 
+  mutate(name = stringr::str_to_title(name))
+
+systems_label_df <- systems_df |> 
+  group_by(name) |> 
+  filter(year == min(year))
+
+ggplot(systems_df) +
+  geom_col(aes(year, value, fill = name), width = 2, position = "fill") +
+  geom_text_repel(data = systems_label_df, aes(year+0.45, value, label = name, color = name), 
+                  position = position_fill(vjust = .5),
+                  family = "Open Sans", fontface = "bold", hjust = 0, vjust = 1,
+                  ylim = c(-Inf, NA), direction = "y",
+                  bg.color = alpha("grey95",0.5), 
+                  bg.r = 0.25,size = 2,
+                  min.segment.length = Inf,
+                  seed = 100) +
+  scale_x_continuous(NULL, 
+                     labels = pull(distinct(systems_df, year)),
+                     breaks = pull(distinct(systems_df, year))) +
+  scale_y_continuous("Percent of toal irrigation", 
+                     labels = scales::percent, expand = expansion(mult = 0)) +
+  scale_fill_brewer(NULL, palette = "Dark2") +
+  scale_color_brewer(NULL, palette = "Dark2") +
+  coord_cartesian(clip = "off") +
+  labs(title = "Irrigation methods",
+       subtitle = "Relative proportion of methods used for irrigation application (percent)",
+       caption = "Source: USDA National Agricultural\nStatistics Service") +
+  theme_minimal() +
+  theme(axis.title.x.bottom = element_text(family = "Open Sans", face = "plain"),
+        axis.title.y.left = element_text(family = "Open Sans",  face = "plain"),
+        axis.text = element_text(family = "Open Sans"),
+        legend.position = "none",
+        legend.text = element_text(family = "Open Sans"),
+        panel.grid.major.x = element_line(color = "grey75", linewidth = 0.2, linetype = "dashed"),
+        panel.grid.major.y = element_line(color = "grey75", linewidth = 0.2, linetype = "dashed"),
+        plot.title = element_text(family = "Oswald", face = "bold"),
+        plot.subtitle = element_text(family = "Open Sans", face = "italic", color = "grey40"),
+        plot.caption = element_text(color = "grey40"),
+        strip.background = element_rect(linewidth = 0),
+        strip.text = element_text(family = "Open Sans", face = "bold"))
+  
+ggsave(fs::path("Figures", "Figure_9", ext = "png"), dpi = 300, width = 6.25, height = 3.25, units = "in")

@@ -3,6 +3,9 @@ Code and Figures on Texas Irrigation
 
 ## README
 
+Authors: Kade Terrell, Allen Berthold, Michael Schramm, Ed Rhodes; Texas
+Water Resources Institute, College Station, TX.
+
 This repository includes the data and code used to generate figures in
 the Texas irrigation report. Source data includes:
 
@@ -55,3 +58,5 @@ Irrigation Withdrawals Water-Use Model.
 ![](Figures/Figure_7.png "Cotton has historically been under the most irrigated acreage in Texas, but corn and wheat irrigated acreage is slowly increasing. Data from TWDB (2026c)")
 
 ![](Figures/waffle_crop.png "Wheat had the highest irrigated acreage (approximately 26% of irrigated acres), followed by cotton (23%) and corn (15%) in 2023. Data from TWDB (2026c)")
+
+![](Figures/Figure_9.png)
